@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/Solierrr/lib-web/compare/v0.6.0...v0.6.1) (2026-11-01)
+
+
+### Bug Fixes
+
+* cover the default text color in the gallery dark theme ([be11a57](https://github.com/Solierrr/lib-web/commit/be11a577fec443218eeb52f33f2db4ac43d1df73))
+
 ## [0.6.0](https://github.com/Solierrr/lib-web/compare/v0.5.0...v0.6.0) (2026-11-01)
 
 
