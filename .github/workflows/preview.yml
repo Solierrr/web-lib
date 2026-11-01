@@ -27,4 +27,5 @@ jobs:
       id-token: write
     uses: Solierrr/.github/.github/workflows/preview-storybook.yml@main
     with:
+      test: ${{ github.event_name == 'pull_request' }}
       publish: ${{ github.event_name != 'pull_request' }}

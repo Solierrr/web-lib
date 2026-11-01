@@ -41,6 +41,10 @@ Os componentes de e-mail usam estilos inline com valores resolvidos dos mesmos t
 
 Logo, título, mensagens, ações e rodapé ficam centralizados. O branding usa o SVG oficial src/assets/snowflake.svg como fonte; scripts/build-email-branding.mjs gera seu PNG transparente e as laterais estáticas do padrão Grid dos formulários. O build incorpora as imagens ao pacote. As laterais desaparecem em telas pequenas para preservar o espaço do conteúdo. Transporte Nodemailer deve configurar attachDataUrls=true para transformar essas imagens em partes CID incorporadas ao e-mail.
 
+## Testes
+
+`npm test` roda os testes unitários (projeto `unit`, jsdom). `npm run test:storybook` roda as histórias como testes no Chromium (projeto `storybook`, com o `play` de cada história e a verificação de acessibilidade em modo `todo`); na primeira vez, `npx playwright install chromium`. As histórias rodam dentro de um `MemoryRouter` (decorator global em `.storybook/preview.tsx`). Na pull request, o workflow `Preview` roda esses testes e constrói o Storybook.
+
 ## Casca das galerias e dos previews
 
 A entrada `@solaria.network/web-lib/gallery` traz a casca padrão dos ambientes de preview: cabeçalho com link para o portal de previews, menu lateral com busca, rodapé com repositório, versão e commit, tema claro e escuro e idioma pt-BR, en-US e es-ES com seletor (a escolha fica no navegador). O repositório só entrega o conteúdo.
