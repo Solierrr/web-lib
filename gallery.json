@@ -1,0 +1,14 @@
+{
+  "name": "lib-web",
+  "kind": "storybook",
+  "title": {
+    "pt-BR": "Storybook da biblioteca de componentes",
+    "en-US": "Component library Storybook",
+    "es-ES": "Storybook de la biblioteca de componentes"
+  },
+  "description": {
+    "pt-BR": "Os componentes da biblioteca web compartilhada, com exemplos e controles.",
+    "en-US": "The components of the shared web library, with examples and controls.",
+    "es-ES": "Los componentes de la biblioteca web compartida, con ejemplos y controles."
+  }
+}
