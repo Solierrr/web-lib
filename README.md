@@ -41,6 +41,21 @@ Os componentes de e-mail usam estilos inline com valores resolvidos dos mesmos t
 
 Logo, título, mensagens, ações e rodapé ficam centralizados. O branding usa o SVG oficial src/assets/snowflake.svg como fonte; scripts/build-email-branding.mjs gera seu PNG transparente e as laterais estáticas do padrão Grid dos formulários. O build incorpora as imagens ao pacote. As laterais desaparecem em telas pequenas para preservar o espaço do conteúdo. Transporte Nodemailer deve configurar attachDataUrls=true para transformar essas imagens em partes CID incorporadas ao e-mail.
 
+## Casca das galerias e dos previews
+
+A entrada `@solaria.network/web-lib/gallery` traz a casca padrão dos ambientes de preview: cabeçalho com link para o portal de previews, menu lateral com busca, rodapé com repositório, versão e commit, tema claro e escuro e idioma pt-BR, en-US e es-ES com seletor (a escolha fica no navegador). O repositório só entrega o conteúdo.
+
+```tsx
+import { GalleryShell, useGallery } from '@solaria.network/web-lib/gallery'
+import '@solaria.network/web-lib/gallery.css'
+
+<GalleryShell title={{ 'pt-BR': 'Modelos', 'en-US': 'Templates', 'es-ES': 'Plantillas' }} repository="api-email" sections={sections} selectedId={id} onSelect={setId}>
+  <Viewer />
+</GalleryShell>
+```
+
+`useGallery()` devolve o idioma atual e `text()` para traduzir textos de conteúdo. Cada texto é uma string ou um objeto por idioma. O CSS usa os tokens de `theme.css` e define o tema escuro por `data-gallery-theme` ou pelo tema do sistema. `storybookTheme({ title })` devolve os valores para o `create()` de `storybook/theming` no `.storybook/manager.ts`, com as mesmas cores e fonte.
+
 ## Teste local com api-email
 
 Na web-lib, sem publicar:

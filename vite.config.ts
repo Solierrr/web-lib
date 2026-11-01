@@ -11,6 +11,7 @@ export default defineConfig({
       entry: {
         index: resolve(import.meta.dirname, 'src/index.ts'),
         email: resolve(import.meta.dirname, 'src/email/index.ts'),
+        gallery: resolve(import.meta.dirname, 'src/gallery/index.ts'),
         observability: resolve(import.meta.dirname, 'src/observability/index.ts'),
         tokens: resolve(import.meta.dirname, 'src/tokens/index.ts'),
       },

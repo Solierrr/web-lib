@@ -48,6 +48,11 @@
       "types": "./dist/email/index.d.ts",
       "import": "./dist/email.js"
     },
+    "./gallery": {
+      "types": "./dist/gallery/index.d.ts",
+      "import": "./dist/gallery.js"
+    },
+    "./gallery.css": "./dist/gallery.css",
     "./tokens": {
       "types": "./dist/tokens/index.d.ts",
       "import": "./dist/tokens.js"
